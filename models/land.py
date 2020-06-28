@@ -7,7 +7,7 @@ class LandTile(object):
     0 but dynamically changing
     """
     _height = 0
-    _structure = 0
+    _structure = None
 
     def __init__(self, height=0, structs=None):
         self._height = height
@@ -28,3 +28,6 @@ class LandTile(object):
             self._structure = asset
         else:
             raise Exception
+    
+    def get_asset(self):
+        return self._structure
