@@ -6,8 +6,8 @@ class LandTile(object):
     """Land is set at a height from -100 to 100, with water level averaging
     0 but dynamically changing
     """
-    self._height
-    self._structure
+    _height = 0
+    _structure = 0
 
     def __init__(self, height=0, structs=None):
         self._height = height
@@ -24,7 +24,7 @@ class LandTile(object):
             self.height = -100
     
     def set_asset(self, asset):
-        if self._structure = None:
+        if self._structure == None:
             self._structure = asset
         else:
             raise Exception
